@@ -5,6 +5,9 @@ import { RouterProvider } from "react-router/dom";
 import './index.css';
 import Homepage from './pages/Homepage';
 import Login from './pages/Login';
+import BlogDetail from './pages/BlogDetail';
+import CreateBlog from './pages/CreateBlog';
+import { Toaster } from 'react-hot-toast';
 
 const router = createBrowserRouter([
   {
@@ -15,10 +18,19 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
+    {
+    path: "/blogs/:objectId",
+    element: <BlogDetail />,
+  },
+  {
+    path: "/create",
+    element: <CreateBlog />,
+  },
 ]);
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+  <>
     <RouterProvider router={router} />
-  </StrictMode>,
+    <Toaster />
+  </>,
 )
