@@ -1,13 +1,12 @@
-import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { Toaster } from 'react-hot-toast';
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import './index.css';
-import Homepage from './pages/Homepage';
-import Login from './pages/Login';
 import BlogDetail from './pages/BlogDetail';
 import CreateBlog from './pages/CreateBlog';
-import { Toaster } from 'react-hot-toast';
+import Homepage from './pages/Homepage';
+import Login from './pages/Login';
 
 const router = createBrowserRouter([
   {
